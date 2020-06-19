@@ -89,7 +89,8 @@ public class ThreadUnsafeDemo {
     // JVM设计时，是按照32bit为最小操作单位设计的
     //byte 8; short 16; int 32; long 64; float 32; double 64; char 16; boolean <32
 //2.代码可见性 —— 内存可见性问题。由于高速缓存（cache）的存在，导致不一定看到最新的结果，进而导致问题。
-//3.代码重排序
+//3.代码重排序 —— 很多时候，重排序后的执行效率更高。（编译器编译 -> JVM(JIT -> CPU)）都可以进行重排序
+    //单线程情况下，重排序后的结果得和重排序之前效果一致。
 
 
 //java内存模型（JMM）规定：
