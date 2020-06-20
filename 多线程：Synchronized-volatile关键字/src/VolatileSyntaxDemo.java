@@ -15,3 +15,7 @@ public class VolatileSyntaxDemo {
 //作用：原子性/内存可见性/代码重排序
 //永远保证主内存的值是最新的，并且每次任何时候都是读最新的值
 
+//volatile的作用：
+//1.解决内存可见性的问题 —— 被volatile修饰的变量，永远读到最新值
+//2.解决原子性问题 —— double/long的赋值中的原子性
+//3.约束代码重排序 —— volatile Object o = new Object(); 被volatile修饰，仅仅实例化的时候不能被重排序
