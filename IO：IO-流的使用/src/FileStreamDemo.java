@@ -76,6 +76,7 @@ public class FileStreamDemo {
         }*/
 
         try (InputStream is = new FileInputStream("测试目录\\hello.txt")){
+            //有效数据存在buf[0,n]
             byte[] buffer = new byte[8];
 
             int count = 0;//read的调用次数
@@ -116,16 +117,3 @@ public class FileStreamDemo {
 }
 
 //字节流（最原始的一种数据流）—— 没有加工过的数据
-
-//(应用最多读8个字节，实际读到的可能是n个字节，直到n==-1(EOS)才能停止读取)
-//try(InputStream is = new FileInputStream(路径)){
-//-1代表EOS
-//1.按字节读取
-//2.批量读取
-//  byte[] buf = new byte[8];
-//  while(true){
-//      int n = is read(buf);
-//      if(n == -1) break;
-//  }
-//}catch(IOException e){
-//}
