@@ -76,7 +76,6 @@ public class FileStreamDemo {
         }*/
 
         try (InputStream is = new FileInputStream("测试目录\\hello.txt")){
-            //有效数据存在buf[0,n]
             byte[] buffer = new byte[8];
 
             int count = 0;//read的调用次数
@@ -93,6 +92,7 @@ public class FileStreamDemo {
                     break;
                 }
 
+                // 有效数据保存在 buf[0, n)
                 for (int i = 0; i < n; i++) {
                     int b = buffer[i];
 
