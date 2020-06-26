@@ -15,6 +15,7 @@ import java.io.InputStream;
  *         ByteArrayInputStream(字节数组作为输入源)
  *         ByteArrayOutputStream(字节数组作为输出目标)
  *
+ * FileInputStream来自 文字、输入、字节流
  * 文件流
  * @author: matilda
  * @create: 2020-06-25 15:37
@@ -115,3 +116,16 @@ public class FileStreamDemo {
 }
 
 //字节流（最原始的一种数据流）—— 没有加工过的数据
+
+//(应用最多读8个字节，实际读到的可能是n个字节，直到n==-1(EOS)才能停止读取)
+//try(InputStream is = new FileInputStream(路径)){
+//-1代表EOS
+//1.按字节读取
+//2.批量读取
+//  byte[] buf = new byte[8];
+//  while(true){
+//      int n = is read(buf);
+//      if(n == -1) break;
+//  }
+//}catch(IOException e){
+//}
