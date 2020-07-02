@@ -7,6 +7,8 @@ import java.util.Map;
  * @author: matilda
  * @create: 2020-06-30 19:39
  **/
+
+//分析唯一的网络地址
 public class URLParser {
     public static void main(String[] args) {
         String[] urls = {
