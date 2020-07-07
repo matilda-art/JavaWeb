@@ -11,9 +11,11 @@ import java.io.PrintWriter;
  * @author: matilda
  * @create: 2020-07-05 09:39
  **/
+
 public class MyFirstDynamicResource extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
         //1.通过query string，取到wd这个name所对应的value
         String wd = req.getParameter("wd");
 
